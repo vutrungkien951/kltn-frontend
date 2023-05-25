@@ -1,17 +1,35 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { Provider } from 'react-redux';
+import store from './app/store';
+import ReactDOM from 'react-dom';
+import { I18nextProvider } from 'react-i18next';
+import i18next from 'i18next';
+import common_en from "../src/translations/en/common.json"
+import common_vi from "../src/translations/vi/common.json"
+import { AuthProvider } from './context/auth';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+i18next.init({
+  interpolation: { escapeValue: false },  // React already does escaping
+  lng: 'en',                              // language to use
+  resources: {
+      en: {
+          common: common_en               // 'common' is our custom namespace
+      },
+      vi: {
+          common: common_vi
+      },
+  },
+});
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+ReactDOM.render(
+  <I18nextProvider i18n={i18next}>
+    <AuthProvider>
+      <Provider store={store}>
+        <App />
+      </Provider>,
+    </AuthProvider>
+  </I18nextProvider>,
+  document.getElementById('root')
+)
