@@ -351,5 +351,13 @@
         "phone-placeholder" : "Nhập vào số điện thoại",
         "message-create-user-success" : "Tạo tài khoản thành công!",
         "message-create-user-failed" : "Tạo tài khoản thất bại!"
+    },
+    "master-data" : {
+        "research-article" : "Bài báo nghiên cứu",
+        "review-article" : "Bài báo tổng quan",
+        "book-review" : "Đánh giá sách",
+        "case-report" : "Báo cáo trường hợp",
+        "commentaries-letters" : "Bình luận và thư cho các biên tập viên",
+        "datasets" : "Bộ dữ liệu"
     }
 }

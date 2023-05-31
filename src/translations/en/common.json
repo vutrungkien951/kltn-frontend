@@ -351,5 +351,13 @@
         "phone-placeholder" : "Enter phone",
         "message-create-user-success" : "Create user successfully!",
         "message-create-user-failed" : "Failed to create user!"
+    },
+    "master-data" : {
+        "research-article" : "Research article",
+        "review-article" : "Review article",
+        "book-review" : "Book review",
+        "case-report" : "Case report",
+        "commentaries-letters" : "Commentaries and letters to editors",
+        "datasets" : "Datasets"
     }
 }

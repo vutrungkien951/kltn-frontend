@@ -241,19 +241,22 @@ function Submission() {
                                             style={{ maxWidth: '1240px' }}
                                         >
                                             <option>
-                                                Bài báo gốc
+                                                {t("master-data.research-article")}
                                             </option>
                                             <option>
-                                                Bài báo cáo
+                                                {t("master-data.review-article")}
                                             </option>
                                             <option>
-                                                Ghi chú kỹ thuật hoặc tiểu luận bằng hình ảnh
+                                                {t("master-data.book-review")}
                                             </option>
                                             <option>
-                                                Bài đánh giá
+                                                {t("master-data.case-report")}
                                             </option>
                                             <option>
-                                                Bình luận và xã luận
+                                                {t("master-data.commentaries-letters")}
+                                            </option>
+                                            <option>
+                                                {t("master-data.datasets")}
                                             </option>
                                         </Select>
                                     </div>
